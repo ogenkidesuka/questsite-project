@@ -4,6 +4,9 @@ from django.db import models
 
 
 class Game(models.Model):
+    '''
+    Class of all game scenarios
+    '''
     # full_name is displaying game name for players
     full_name = models.CharField(max_length=100)
     # short_name is a prefix to code of place, which player can visit
@@ -17,6 +20,9 @@ class Game(models.Model):
 
 
 class Place(models.Model):
+    '''
+    Class of all places of every game scenario
+    '''
     # game.id == id of game, to which is linked place
     #   it needs to get access to correct Games.short_name
     game_id = models.ForeignKey(Game, on_delete=models.CASCADE)

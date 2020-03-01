@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>play_form.html page</title>
+    </head>
+    <body>
+        <!-- Go to place form --!>
+        <form action="/play/" method="get">
+            <input type="text" name="code_input">
+            <input type="submit" value="Go">
+        </form>
+        <hr>
+        {% if pl %}
+        <!-- Visited places --!>
+            <b>{{ pl.code  }}</b>
+            <p>{{ pl.info  }}</p>
+        {% endif %}
+    </body>
+</html>
